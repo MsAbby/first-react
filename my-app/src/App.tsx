@@ -1,27 +1,20 @@
 import React from 'react';
-import logo from '../src/common/images/logo.svg';
-import '../src/common/style/App.css';
+import Login from './pages/login';
+import Home from './pages/home';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import { Fragment } from 'react';
 function App() {
   return (
     <Fragment>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-      <div>
-        你好Fragment
-      </div>
+      <HashRouter>
+        <Switch>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/home" component={Home}></Route>
+          <Route exact path="/" component={Home} />
+          <Redirect to={"/home"} />
+        </Switch>
+        </HashRouter>
     </Fragment>
   );
 }
