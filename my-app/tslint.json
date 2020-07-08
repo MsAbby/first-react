@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "arrow-parens": false,
+    "arrow-return-shorthand": [false],
+    "comment-format": [true, "check-space"],
+    "no-empty-interface": false
+  },
+  "extends": ["tslint: recommended", "tslint-react"]
+}
