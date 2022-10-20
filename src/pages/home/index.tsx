@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from 'react'
-import {withRouter} from 'react-router-dom';
+// import {withRouter} from 'react-router-dom';
 
 function Home() {
   const [add, setAdd ] = useState(100)
@@ -41,4 +41,4 @@ function Home() {
   )
 }
 
-export default withRouter(Home);
+// export default withRouter(Home);

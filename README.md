@@ -1,3 +1,8 @@
+## 常用技术栈
+React 16.8 + antd v4 + umi v3 + ant design pro v4
+打开 ant design pro v4
+Ant Design Pro 是基于 Ant Design 和 umi 的封装的一整套企业级中后台前端/设计解决方案
+
 ## pages
 
  ## less 支持的配置
@@ -127,3 +132,23 @@ options should NOT have additional properties
 
 // 原因： webpack 版本和webpack-dev-server版本和html-webpack-plugin版本要对应
 // "devDependencies": { "html-webpack-plugin": "^4.5.1", "webpack": "^4.46.0", "webpack-dev-server": "^3.11.2" }
+
+## 报错10
+`js
+Failed to compile.
+
+./src/index.tsx
+TypeError: Cannot read property 'getFormatter' of undefined
+
+// "eslint": "^8.23.1",
+
+// 解决方案： 降低 eslint版本 - > "eslint": "^5.8.0"
+`
+
+## 报错11
+`js
+Argument of type ‘HTMLElement | null‘ is not assignable to parameter of type ‘HTMLElement‘. Type ‘
+
+// 解决方案： 增加类型断言
+// HTMLElement = document.getElementById("main") as HTMLElement;
+`

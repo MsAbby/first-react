@@ -1,18 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Login from './pages/login';
+// 1. 导入react
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Comment from './pages/demo/comment';
+
 import * as serviceWorker from './serviceWorker';
-import PCRouter from './router/index';
-import './assets/reset.scss';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <PCRouter />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// import PCRouter from './router/index';
+// import './assets/reset.scss';
+
+// 2. 渲染 react 元素
+const container = document.getElementById('root') as HTMLElement;
+
+const root = createRoot(container);
+root.render(<Comment />);
+
 serviceWorker.unregister();
